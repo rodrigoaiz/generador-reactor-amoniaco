@@ -1,0 +1,67 @@
+---
+import Logo from "@/components/Logo.astro";
+import LogoLow from "@/components/LogoLow.astro";
+import { main } from "@/config/menu.json";
+interface main {
+  name: string;
+  url: string;
+}
+const { pathname } = Astro.url;
+---
+
+<header id="header" class="fixed top-0 z-50 w-full">
+  <nav
+    class="navbar px-5 mx-auto flex flex-wrap items-center justify-between menu w-full z-50 top-0 hover:transition-all animate-fade-down animate-duration-1000"
+  >
+    <!-- logo -->
+    <div class="order-0">
+      <a href="/"><Logo class="hidden md:block h-5" /></a>
+      <a href="/"><LogoLow class="md:hidden h-7" /></a>
+    </div>
+
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul
+        class="flex flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
+      >
+        <li>
+          {
+            main.map((item) => (
+              <a
+                href={item.url}
+                class={`hover:text-slate-400 transition-all ${
+                  pathname === item.url && "active"
+                }`}
+              >
+                {item.name}
+              </a>
+            ))
+          }
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<style>
+  a.active {
+    text-decoration: overline;
+  }
+  .menu-down {
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: var(--transition-smooth);
+  }
+</style>
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector("[data-collapse-toggle]");
+    const navbar = document.getElementById("navbar-default");
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) {
+        header.classList.add("menu-down");
+      } else {
+        header.classList.remove("menu-down");
+      }
+    });
+  });
+</script>
