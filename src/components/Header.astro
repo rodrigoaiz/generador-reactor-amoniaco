@@ -9,23 +9,23 @@ interface main {
 const { pathname } = Astro.url;
 ---
 
-<header id="header" class="fixed top-0 z-50 w-full">
+<header id="header" class="fixed top-0 z-50 w-full py-1 md:py-2">
   <nav
-    class="navbar px-5 mx-auto flex flex-wrap items-center justify-between menu w-full z-50 top-0 hover:transition-all animate-fade-down animate-duration-1000"
+    class="navbar px-5 mx-auto flex flex-wrap items-center justify-between w-full z-50 top-0 hover:transition-all animate-fade-down animate-duration-1000"
   >
     <!-- logo -->
     <div class="order-0">
-      <a href="/"><Logo class="hidden md:block h-5" /></a>
+      <a href="/"><Logo class="hidden md:block h-8" /></a>
       <a href="/"><LogoLow class="md:hidden h-7" /></a>
     </div>
 
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul
-        class="flex flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
+        class="flex gap-x-5"
       >
-        <li>
-          {
-            main.map((item) => (
+      {
+        main.map((item) => (
+          <li class="">
               <a
                 href={item.url}
                 class={`hover:text-slate-400 transition-all ${
@@ -34,9 +34,9 @@ const { pathname } = Astro.url;
               >
                 {item.name}
               </a>
+          </li>
             ))
           }
-        </li>
       </ul>
     </div>
   </nav>
