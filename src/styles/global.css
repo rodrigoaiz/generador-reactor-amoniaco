@@ -1,42 +1,51 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+@import "tailwindcss-animated";
 
-:root {
-  --red: 230 57 70;
-  --light: 241 250 238;
-  --darkest-blue: 8 20 36;
-  --pink-own: 252 207 190;
-  --purple-own: 110 63 106;
-  --blue-own: 117 144 162;
-  --css-orangedark-own: rgb(193, 70, 0);
-  --css-orange-own: rgb(255, 157, 35);
-  --css-beige-own: rgb(229, 208, 172);
-  --css-beigelight-own: rgb(254, 249, 225);
-  --css-red-own: rgb(230 57 70);
-  --css-ownwhite: rgb(241 250 238);
-  --css-darkest-blue: rgb(8 20 36);
-  --css-pink: rgb(252, 207, 190);
-  --css-purple: rgb(110, 63, 106);
-  --css-blue: rgb(117, 144, 162);
-  --headings-xxl: clamp(4rem, 3.5vw, 3rem);
-  --headings-xl: clamp(1.7rem, 2.1vw, 2.2rem);
-  --headings-lg: clamp(1.4rem, 1.7vw, 1.9rem);
+@theme{
+  --color-orangedark-own: rgb(193, 70, 0);
+  --color-orange-own: rgb(255, 157, 35);
+  --color-beige-own: rgb(229, 208, 172);
+  --color-beigelight-own: rgb(254, 249, 225);
+  --color-red-own: rgb(230, 57, 70);
+  --color-white-own: rgb(242, 250, 239);
+  --color-darkestblue-own: rgb(8, 20, 36);
+  --color-pink-own: rgb(252, 207, 190);
+  --color-purple-own: rgb(110, 63, 106);
+  --color-blue-own: rgb(117, 144, 162);
   --font-titulos: 'Playfair Display Variable', serif;
   --font-cuerpo: 'Inter Variable', sans-serif;
+  --text-ownxxl: clamp(4rem, 3.5vw, 3rem);
+  --text-ownxl: clamp(1.7rem, 2.1vw, 2.2rem);
+  --text-ownlg: clamp(1.4rem, 1.7vw, 1.9rem);
+
+}
+
+:root {
   --transition-smooth: ease-in-out 0.5s all;
 }
 
 @layer components {
-  .seccion {
-    @apply py-4 xl:py-8;
-
-    h2 {
-      @apply text-white text-center text-3xl md:text-5xl;
-      font-family: var(--font-titulos);
+  body {
+    @apply bg-orange-own;
+    h1 {
+      @apply text-white text-center text-3xl md:text-5xl font-titulos;
     }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: ease-in-out 0.5s;
+}
+body {
+  font-family: var(--font-cuerpo);
+  color: var(--css-darkest-blue);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
 
 
 @keyframes fade-in {
@@ -56,20 +65,4 @@
     background-color: var(--final-bg, #fff);
     transform: scale(var(--max-scale, 1));
   }
-}
-
-
-
-html {
-  scroll-behavior: smooth;
-  transition: ease-in-out 0.5s;
-}
-body {
-  font-family: var(--font-cuerpo);
-  background-color: #fccfbe;
-  color: var(--css-darkest-blue);
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
 }
