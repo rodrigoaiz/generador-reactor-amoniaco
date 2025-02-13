@@ -11,12 +11,12 @@ const { pathname } = Astro.url;
 
 <header id="header" class="fixed top-0 z-50 w-full py-1 md:py-2">
   <nav
-    class="navbar px-5 mx-auto flex flex-wrap items-center justify-between w-full z-50 top-0 hover:transition-all animate-fade-down animate-duration-1000"
+    class="navbar px-5 mx-auto flex flex-wrap items-center justify-between w-full z-50 top-0 hover:transition-all animate-fade-down animate-duration-1000 leading-loose"
   >
     <!-- logo -->
     <div class="order-0">
-      <a href="/"><Logo class="hidden md:block h-8" /></a>
-      <a href="/"><LogoLow class="md:hidden h-7" /></a>
+      <a href="/"><Logo class="logo hidden md:block h-8 saturate-0 brightness-10" /></a>
+      <a href="/"><LogoLow class="logo md:hidden h-7 saturate-0 brightness-10" /></a>
     </div>
 
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
@@ -25,10 +25,10 @@ const { pathname } = Astro.url;
       >
       {
         main.map((item) => (
-          <li class="">
+          <li class="font-bold">
               <a
                 href={item.url}
-                class={`hover:text-slate-400 transition-all ${
+                class={`hover:text-blue-own transition-all ${
                   pathname === item.url && "active"
                 }`}
               >
@@ -48,6 +48,9 @@ const { pathname } = Astro.url;
   .menu-down {
     background-color: rgba(255, 255, 255, 0.4);
     transition: var(--transition-smooth);
+    .logo {
+      filter: saturate(130%) brightness(100%);
+    }
   }
 </style>
 <script is:inline>

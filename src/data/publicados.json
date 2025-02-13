@@ -1,0 +1,17 @@
+[
+    {
+        "tipo": "Entrevista",
+        "nombre": "TV UNAM - Entrevista",
+        "liga": "https://www.youtube.com/watch?v=F408NSHAnKY"
+    },
+    {
+        "tipo": "Portada",
+        "nombre": "Portada Pulso Naucalpan",
+        "liga": "http://www.cch-naucalpan.unam.mx/V2018/imgprin/publicaciones/Pulso/Pulso290.pdf"
+    },
+    {
+        "tipo": "Artículo",
+        "nombre": "Artículo Gaceta UNAM",
+        "liga": "https://www.gaceta.unam.mx/logra-patente-por-generador-y-reactor-de-amoniaco/"
+    }
+]

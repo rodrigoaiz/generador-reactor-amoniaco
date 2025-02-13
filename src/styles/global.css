@@ -3,17 +3,18 @@
 @import "tailwindcss-animated";
 
 @theme{
-  --color-orangedark-own: rgb(193, 70, 0);
-  --color-orange-own: rgb(255, 157, 35);
-  --color-beige-own: rgb(229, 208, 172);
+  --color-bluemain-own: rgb(31, 138, 112);
+  --color-orange-own: rgb(252, 115, 0);
+  --color-green-own: rgb(129, 178, 20);
+  --color-yellow-own: rgb(255, 204, 41);
   --color-beigelight-own: rgb(254, 249, 225);
   --color-red-own: rgb(230, 57, 70);
   --color-white-own: rgb(242, 250, 239);
   --color-darkestblue-own: rgb(8, 20, 36);
   --color-pink-own: rgb(252, 207, 190);
   --color-purple-own: rgb(110, 63, 106);
-  --color-blue-own: rgb(117, 144, 162);
-  --font-titulos: 'Playfair Display Variable', serif;
+  --color-blue-own: rgb(0, 66, 90);
+  --font-titulos: 'Roboto Serif Variable', serif;
   --font-cuerpo: 'Inter Variable', sans-serif;
   --text-ownxxl: clamp(4rem, 3.5vw, 3rem);
   --text-ownxl: clamp(1.7rem, 2.1vw, 2.2rem);
@@ -28,11 +29,15 @@
 @layer components {
   body {
     @apply bg-orange-own;
+    p {
+      @apply prose-base;
+    }
     h1 {
       @apply text-white text-center text-3xl md:text-5xl font-titulos;
     }
   }
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -41,13 +46,21 @@ html {
 body {
   font-family: var(--font-cuerpo);
   color: var(--css-darkest-blue);
-  font-size: 1rem;
-  line-height: 1.5;
   margin: 0;
   padding: 0;
 }
 
-
+.bento {
+  .card {
+    @apply bg-beigelight-own p-6 rounded-2xl border-1 border-darkestblue-own/80 shadow shadow-amber-950;
+    h3 {
+      @apply text-darkestblue-own font-semibold text-2xl font-titulos mb-2;
+    }
+    p {
+      @apply text-darkestblue-own prose-base;
+    }
+  }
+}
 
 
 @keyframes scale {

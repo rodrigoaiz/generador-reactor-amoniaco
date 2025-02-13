@@ -5,12 +5,16 @@
       "url": "/"
     },
     {
-      "name": "Entrevistas",
-      "url": "./#eventos"
+      "name": "Inventor",
+      "url": "./#inventor"
     },
     {
-      "name": "Suplemento",
-      "url": "./#suplemento"
+      "name": "Importancia",
+      "url": "./#importancia"
+    },
+    {
+      "name": "Publicaciones",
+      "url": "./#publicaciones"
     }
   ],
   "footer": [
