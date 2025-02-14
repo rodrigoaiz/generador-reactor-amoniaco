@@ -6,10 +6,9 @@ interface main {
   name: string;
   url: string;
 }
-const { pathname } = Astro.url;
 ---
 
-<header id="header" class="fixed top-0 z-50 w-full py-1 md:py-2">
+<header id="header" class="fixed top-0 z-50 w-full py-1 md:py-2 hidden md:block">
   <nav
     class="navbar px-5 mx-auto flex flex-wrap items-center justify-between w-full z-50 top-0 hover:transition-all animate-fade-down animate-duration-1000 leading-loose"
   >
@@ -28,9 +27,7 @@ const { pathname } = Astro.url;
           <li class="font-bold">
               <a
                 href={item.url}
-                class={`hover:text-blue-own transition-all ${
-                  pathname === item.url && "active"
-                }`}
+                class={`hover:text-blue-own transition-all`}
               >
                 {item.name}
               </a>
