@@ -1,0 +1,31 @@
+---
+import Publicaciones from "@/data/publicados.json";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="publicados my-12">
+  <h2>Artículos y publicaciones</h2>
+  <article class="max-w-6xl mx-auto grid grid-cols-4 gap-x-6 gap-y-4 mt-12">
+    {
+      Publicaciones.map((publicacion) => (
+        <a
+          href={publicacion.liga}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group overflow-hidden"
+        >
+          <div class="bg-blue-own text-white p-4 flex flex-col aspect-square h-full justify-between group-hover:scale-105 transition-all ease-in-out">
+            <div>
+              <h3>{publicacion.nombre}</h3>
+              <span class="text-sm">{publicacion.tipo}</span>
+            </div>
+            <Icon
+              class="size-12 self-end justify-self-end"
+              name={publicacion.icono}
+            />
+          </div>
+        </a>
+      ))
+    }
+  </article>
+</section>
