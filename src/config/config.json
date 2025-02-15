@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Celebrando 15 años contigo Portal Académico del CCH",
-    "base_url": "portalacademico.cch.unam.mx/15-aniversario",
+    "base_url": "portalacademico.cch.unam.mx/generador-reactor-amoniaco",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",

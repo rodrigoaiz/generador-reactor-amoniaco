@@ -1,3 +1,6 @@
+---
+import Image from '@/components/Image.astro'
+---
 <section id="inventor" class="mx-auto mt-2 md:mt-10 bg-blue-own text-beigelight-own px-2 md:px-0">
   <article class="py-5 md:py-14">
     <div
@@ -20,11 +23,10 @@
           en la industria química.
         </p>
       </div>
-
-      <img
-        src="./img/marroquin.webp"
-        class="max-w-72 mx-auto md:w-full rounded-full overflow-hidden"
+      <Image
+        src="img/marroquin.webp"
         alt="Taurino Marroquin"
+        class="max-w-72 mx-auto md:w-full rounded-full overflow-hidden"
       />
     </div>
   </article>
@@ -32,10 +34,10 @@
     <div
       class="max-w-6xl grid grid-cols-1 md:grid-cols-3 mx-auto items-center justify-center gap-x-20 gap-y-4"
     >
-      <img
-        class="md:order-0 order-1"
-        src="./img/taurino-marroquin-reactor-amoniaco.webp"
+      <Image
+        src="img/taurino-marroquin-reactor-amoniaco.webp"
         alt="Reactor de amoniaco"
+        class="md:order-0 order-1"
       />
       <div class="md:col-span-2 prose-base order-0 md:order-1">
         <p>
