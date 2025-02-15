@@ -2,25 +2,25 @@
     {
         "tipo": "Artículo",
         "nombre": "Sintesis de los fertilizantes",
-        "liga": "/docs/amoniaco-y-la-industria-quimica.pdf",
+        "liga": "docs/amoniaco-y-la-industria-quimica.pdf",
         "icono": "bi:file-earmark-medical-fill"
     },
     {
       "tipo": "Revista",
       "nombre": "Revista del Sistema de Laboratorios SILADIN",
-      "liga": "/docs/Consciencia5-FRAGMENTO.pdf",
+      "liga": "docs/Consciencia5-FRAGMENTO.pdf",
       "icono": "bi:book-fill"
     },
     {
       "tipo": "Artículo",
       "nombre": "Prototipo de generador y reactor de amonáaco",
-      "liga": "/docs/prototipo-generador-reactor-amoniaco.pdf",
+      "liga": "docs/prototipo-generador-reactor-amoniaco.pdf",
       "icono": "bi:file-earmark-medical-fill"
     },
     {
         "tipo": "Revista",
         "nombre": "Portada Pulso Naucalpan",
-        "liga": "/docs/REVISTA-PULSO-FRAGMENTO.pdf",
+        "liga": "docs/REVISTA-PULSO-FRAGMENTO.pdf",
         "icono": "bi:book-fill"
     },
     {
@@ -32,13 +32,13 @@
     {
       "tipo": "Documento",
       "nombre": "Solicitud de INFOCAB",
-      "liga": "/docs/infocab.pdf",
+      "liga": "docs/infocab.pdf",
       "icono": "bi:file-text-fill"
     },
     {
       "tipo": "Documento",
       "nombre": "Título de modelo de utilidad",
-      "liga": "/docs/titulo-modelo-de-utilidad-generador-amoniaco.pdf",
+      "liga": "docs/titulo-modelo-de-utilidad-generador-amoniaco.pdf",
       "icono": "bi:file-text-fill"
     }
 ]

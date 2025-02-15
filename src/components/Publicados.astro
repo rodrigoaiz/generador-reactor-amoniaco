@@ -3,7 +3,7 @@ import Publicaciones from "@/data/publicados.json";
 import { Icon } from "astro-icon/components";
 
 import { BASE_PATH } from "@/config.ts";
-const basePath = import.meta.env.DEV ? "" : BASE_PATH;
+const basePath = import.meta.env.DEV ? "/src/assets/" : BASE_PATH;
 ---
 
 <section id="publicaciones" class="publicados my-12 px-2 md:px-0">

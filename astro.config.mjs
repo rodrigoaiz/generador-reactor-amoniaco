@@ -7,8 +7,9 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-  base: import.meta.env.DEV ? "." : "/generador-reactor-amoniaco",
+  base: import.meta.env.DEV ? "." : "/generador-reactor-amoniaco/",
   vite: {
+     publicDir: "src/assets",
     plugins: [tailwindcss()]
   },
 

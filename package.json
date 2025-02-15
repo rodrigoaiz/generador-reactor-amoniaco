@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
-    "tailwindcss-animated": "^2.0.0"
+    "tailwindcss-animated": "^2.0.0",
+    "vite-plugin-copy": "^0.1.6"
   }
 }
