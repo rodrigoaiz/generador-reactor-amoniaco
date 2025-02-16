@@ -9,7 +9,6 @@ import icon from 'astro-icon';
 export default defineConfig({
   base: import.meta.env.DEV ? "." : "/generador-reactor-amoniaco/",
   vite: {
-     publicDir: "src/assets",
     plugins: [tailwindcss()]
   },
 
