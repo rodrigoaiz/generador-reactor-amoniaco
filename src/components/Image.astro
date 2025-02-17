@@ -1,7 +1,7 @@
 ---
 const { src, alt } = Astro.props;
 import { BASE_PATH } from "@/config.ts";
-const basePath = import.meta.env.DEV ? "/assets/" : BASE_PATH;
+const basePath = import.meta.env.DEV ? "/assets/" : `${BASE_PATH}/assets/`;
 const fullPath = `${basePath}${src}`;
 const { class: className, ...rest } = Astro.props;
 ---
