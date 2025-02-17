@@ -1,10 +1,6 @@
 {
   "main": [
     {
-      "name": "Inicio",
-      "url": "/"
-    },
-    {
       "name": "Inventor",
       "url": "./#inventor"
     },
