@@ -1,0 +1,33 @@
+---
+import Image from "@/components/Image.astro";
+---
+
+<section class="bg-bluemain-own pb-12 px-2 lg:px-0">
+  <article class="max-w-7xl mx-auto">
+    <h2 class="text-beigelight-own mb-12">Videos</h2>
+    <div class="grid lg:grid-cols-5 gap-x-6 gap-y-4 items-center">
+      <div class="lg:col-span-2">
+        <lite-youtube
+          videoid="8DPY2oi7eWk"
+          videotitle="Modelo de Utilidad 4874 (Generador y reactor de amoniaco) | Química III | CCH UNAM"
+        >
+        </lite-youtube>
+      </div>
+      <Image
+        src="/img/taurireactor.webp"
+        class="hidden lg:block"
+        alt=""
+      />
+      <div class="lg:col-span-2">
+        <lite-youtube
+          videoid="F408NSHAnKY"
+          videotitle="GENERADOR Y REACTOR DE AMONIACO, CCH NAUCALPAN. La UNAM responde 503."
+        >
+        </lite-youtube>
+      </div>
+    </div>
+  </article>
+</section>
+<script>
+  import "@justinribeiro/lite-youtube";
+</script>

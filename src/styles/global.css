@@ -68,7 +68,7 @@ body {
 .publicados {
   article {
     h3 {
-      @apply text-orange-own font-semibold text-2xl font-titulos;
+      @apply text-orange-own font-semibold text-xl xl:text-2xl font-titulos;
     }
     span {
       @apply text-beigelight-own font-light text-sm;

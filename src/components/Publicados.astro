@@ -3,12 +3,12 @@ import Publicaciones from "@/data/publicados.json";
 import { Icon } from "astro-icon/components";
 
 import { BASE_PATH } from "@/config.ts";
-const basePath = import.meta.env.DEV ? "/assets/" : BASE_PATH;
+const basePath = import.meta.env.DEV ? "/assets/" : `${BASE_PATH}/assets/`;
 ---
 
 <section id="publicaciones" class="publicados my-12 px-2 lg:px-0">
   <h2>Artículos y publicaciones</h2>
-  <article class="max-w-6xl mx-auto grid md:grid-cols-4 gap-x-6 gap-y-4 mt-12">
+  <article class="max-w-6xl mx-auto grid lg:grid-cols-4 gap-x-6 gap-y-4 mt-12">
     {
       Publicaciones.map((publicacion) => (
         <a
@@ -17,7 +17,7 @@ const basePath = import.meta.env.DEV ? "/assets/" : BASE_PATH;
           rel="noopener noreferrer"
           class="group overflow-hidden"
         >
-          <div class="bg-blue-own text-white p-4 flex flex-col md:aspect-square h-full justify-between group-hover:scale-105 transition-all ease-in-out">
+          <div class="bg-blue-own text-white p-4 flex flex-col lg:aspect-square h-full justify-between lg:group-hover:scale-105 transition-all ease-in-out">
             <div>
               <h3>{publicacion.nombre}</h3>
               <span class="text-sm">{publicacion.tipo}</span>
