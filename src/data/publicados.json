@@ -27,7 +27,8 @@
         "tipo": "Artículo",
         "nombre": "Artículo Gaceta UNAM",
         "liga": "https://www.gaceta.unam.mx/logra-patente-por-generador-y-reactor-de-amoniaco/",
-        "icono": "bi:link-45deg"
+        "icono": "bi:link-45deg",
+        "externo": true
     },
     {
       "tipo": "Documento",

@@ -12,7 +12,11 @@ const basePath = import.meta.env.DEV ? "/assets/" : `${BASE_PATH}/assets/`;
     {
       Publicaciones.map((publicacion) => (
         <a
-          href={`${basePath}${publicacion.liga}`}
+          href={
+            publicacion.externo
+              ? publicacion.liga
+              : `${basePath}${publicacion.liga}`
+          }
           target="_blank"
           rel="noopener noreferrer"
           class="group overflow-hidden"
