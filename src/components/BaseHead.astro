@@ -1,15 +1,25 @@
 ---
+import {
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  SITE_URL,
+  SITE_IMAGE,
+  SITE_LANG,
+  SITE_AUTHOR,
+  SITE_KEYWORDS,
+} from '../config';
+
 export interface Props {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   image?: string;
   ogType?: string;
 }
 
 const {
-  title,
-  description,
-  image = "social_img.jpg",
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  image = SITE_IMAGE,
   ogType = "website",
 } = Astro.props;
 ---
@@ -31,11 +41,11 @@ const {
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content={SITE_AUTHOR} />
+<meta name="keywords" content={SITE_KEYWORDS} />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link
-  rel="canonical"
-  href="portalacademico.cch.unam.mx/generador-reactor-amoniaco"
-/>
+<link rel="canonical" href={SITE_URL} />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Primary Meta Tags -->
@@ -45,14 +55,30 @@ const {
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={ogType} />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content={SITE_URL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={image} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:url" content={SITE_URL} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={image} />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{title}",
+    "description": "{description}",
+    "url": "{SITE_URL}",
+    "image": "{SITE_IMAGE}",
+    "author": {
+      "@type": "Organization",
+      "name": "{SITE_AUTHOR}"
+    }
+  }
+</script>

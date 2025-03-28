@@ -5,19 +5,20 @@ import Header from "@/components/Header.astro";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/roboto-serif";
 import "@/styles/global.css";
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_IMAGE } from "@/config";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_IMAGE, SITE_LANG, BASE_PATH } from "@/config";
+
 const {
   image = SITE_IMAGE,
   title = SITE_TITLE,
   description = SITE_DESCRIPTION,
-  ogType,
+  ogType = "website",
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={SITE_LANG}>
   <head>
-    <base href="/generador-reactor-amoniaco/" />
+    <base href={BASE_PATH} />
     <BaseHead
       title={title}
       description={description}
